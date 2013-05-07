@@ -13,5 +13,5 @@ Usage:
 
  - Upload to your website
  - Enable APC and cURL
- - Update the `$svpply_username`, `$openexchange_id`, and $gbp (change to your ISO currency code) variables.
+ - Update the `$svpply_username`, `$openexchange_id`, and `$gbp` (change to your ISO currency code) variables.
  - Enjoy.
