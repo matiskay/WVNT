@@ -6,8 +6,11 @@
 
   {% if products %}
     {% for product in products %}
-      <div class="box">
+      <div class="box product">
         <img src="img/placeholder.png" data-src="{{ product.image }}" />
+        <div class="product-meta">
+          <div class="product-price">$ {{ product.price }}</div>
+        </div>
       </div>
     {% endfor %}
   {% else %}

@@ -300,6 +300,41 @@ h1 span {
   text-align: center;
 }
 
+.product {
+  position: relative;
+}
+
+.product-meta {
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.4s ease-in-out;
+  opacity: 0;
+  height: 195px;
+  width: 195px;
+  background: rgba(0,0,0,0.6);
+  padding-top: 40px;
+  padding-left: 40px;
+}
+
+.product-price {
+  background: #44d27d;
+  border-radius: 50%;
+  padding: 10px;
+  height: 129px;
+  width: 129px;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  color: #f5f5f5;
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product:hover .product-meta {
+  opacity: 1;
+}
+
 
 /* ==========================================================================
    Helper classes
