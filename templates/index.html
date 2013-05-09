@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% if message is defined %}
+    <div class="messages">
+      <strong>{{ message }}</strong> is not a <a href="https://svpply.com/">Svpply</a> user. Please use another username.
+    </div>
+  {% endif %}
+  <div class="main-container">
+    <h1>How much will you need to buy everything you <span>Want</span>?</h1>
+
+    <form action="" class="form form-username">
+      <input type="text" value="" name="username" id="username" placeholder="Your Svpply username" />
+    </form>
+  </div>
+{% endblock %}

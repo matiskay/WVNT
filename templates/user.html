@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}WVNT | {{ user_name }}{% endblock %}
+{% block content %}
+  <div id="main_cont">
+
+  {% for product in products %}
+    <div class="box">
+      <img src="img/placeholder.png" data-src="{{ product.image }}" />
+    </div>
+  {% endfor %}
+  </div><!-- end #main_cont -->
+
+  <div class="total">
+    <span>oh my! You have to spend</span>
+    <p>$ {{ total_price | number_format(2, '.', ',') }}</p>
+  </div><!-- end .total -->
+{% endblock %}
