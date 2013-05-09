@@ -22,6 +22,13 @@ function get_total_price($products) {
   return $total;
 }
 
+$app['twig']->addFilter(new Twig_SimpleFilter('truncate', function($string, $size) {
+  if(strlen($string) < $size)
+    return $string;
+  else
+    return array_shift(str_split($string, $size)) . "...";
+}));
+
 $app->get('/', function () use ($app) {
   return $app['twig']->render('index.html');
 });

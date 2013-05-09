@@ -9,7 +9,10 @@
       <div class="box product">
         <img src="img/placeholder.png" data-src="{{ product.image }}" />
         <div class="product-meta">
-          <div class="product-price">$ {{ product.price }}</div>
+          <div class="product-price-container">
+            <div class="product-price">$ {{ product.price }}</div>
+          </div>
+          <div class="product-name">{{ product.page_title | truncate(15) }}</div>
         </div>
       </div>
     {% endfor %}
