@@ -29,7 +29,8 @@ $app->get('/', function () use ($app) {
 $app->get('/{user_name}', function ($user_name) use ($app) {
   $svpply_user = new SvpplyUsers($user_name);
   $products = $svpply_user->get_products();
-  if ($products) {
+
+  if (is_array($products)) {
     $total_price = get_total_price($products);
 
     return $app['twig']->render('user.html',
@@ -40,6 +41,7 @@ $app->get('/{user_name}', function ($user_name) use ($app) {
       )
     );
   }
+
   return $app['twig']->render('index.html', array(
     'message' => $user_name,
   ));

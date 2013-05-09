@@ -294,6 +294,12 @@ h1 span {
   text-decoration: underline;
 }
 
+.user-message {
+  padding: 20px;
+  color: #DEDEDE;
+  text-align: center;
+}
+
 
 /* ==========================================================================
    Helper classes

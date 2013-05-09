@@ -4,11 +4,17 @@
 {% block content %}
   <div id="main_cont">
 
-  {% for product in products %}
-    <div class="box">
-      <img src="img/placeholder.png" data-src="{{ product.image }}" />
+  {% if products %}
+    {% for product in products %}
+      <div class="box">
+        <img src="img/placeholder.png" data-src="{{ product.image }}" />
+      </div>
+    {% endfor %}
+  {% else %}
+    <div class="user-message">
+      You don't have any product in your wvnt list.
     </div>
-  {% endfor %}
+  {% endif %}
   </div><!-- end #main_cont -->
 
   <div class="total">
