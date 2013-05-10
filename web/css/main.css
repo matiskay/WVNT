@@ -149,10 +149,9 @@ body {
 
 .total {
 	width:940px;
-	height:160px;
-	padding-top:40px;
 	background: #EBEBEB;
 	margin-bottom:40px;
+  padding: 40px 0;
 }
 
 .total span {
